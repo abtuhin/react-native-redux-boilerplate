@@ -10,7 +10,7 @@ createReducer(){
 
     echo "const INITIAL_STATE = {};
 
-export const articleReducer = (state = INITIAL_STATE, action) => {
+export const ${module}Reducer = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
 		default:
 			return state;
@@ -49,8 +49,7 @@ connectWithRootReducer(){
 rootReducerInit(){
   echo "import { combineReducers } from \"redux\";
 
-const appReducers = combineReducers({
-});
+const appReducers = combineReducers({});
 
 const reducers = (state, action) => {
   return appReducers(state, action);
